@@ -7,7 +7,7 @@
 <body>
 	<div id='container'>
 		<div class='signup'>
-			<form action="" method="post">
+			<form action="signupAction.jsp" method="post">
 				<input type="text" name="name" placeholder="Please enter your name" required>
 				<input type="email" name="email" placeholder="Please enter your e-mail address" required>
 				<input type="number" name="mobile" placeholder="Please enter your mobile number" required>
@@ -26,17 +26,23 @@
 			</h2>
 		</div>
 		<div class='whysign'>
-
-			<h1>Successfully Updated</h1>
-
-
-			<h1>Some thing Went Wrong! Try Again !</h1>
+			<%
+			String msg = request.getParameter("msg");
+			if ("valid".equals(msg)) {
+			%>
+			<h1>User registered successfully!</h1>
+			<%
+			} else if ("invalid".equals(msg)) {
+			%>
+			<h1>Whoops! Something went wrong! Please try again!</h1>
+			<%
+			}
+			%>
 
 			<h2>Online Shopping</h2>
 			<p>The Online Shopping System is the application that allows the
 				users to shop online without going to the shops to buy them.</p>
 		</div>
 	</div>
-
 </body>
 </html>
