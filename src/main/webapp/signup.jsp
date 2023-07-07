@@ -22,7 +22,7 @@
 				<input type="submit" value="signup">
 			</form>
 			<h2>
-				<a href="">Login</a>
+				<a href=login.jsp">Login</a>
 			</h2>
 		</div>
 		<div class='whysign'>
@@ -40,8 +40,7 @@
 			%>
 
 			<h2>Online Shopping</h2>
-			<p>The Online Shopping System is the application that allows the
-				users to shop online without going to the shops to buy them.</p>
+			<p>The Online Shopping System is the application that allows the users to shop online without going to the shops to buy them.</p>
 		</div>
 	</div>
 </body>
