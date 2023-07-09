@@ -19,10 +19,10 @@
 				</select>
 				<input type="text" name="answer" placeholder="Please enter your answer" required>
 				<input type="password" name="password" placeholder="Please enter your password" required>
-				<input type="submit" value="signup">
+				<input type="submit" value="Sign up">
 			</form>
 			<h2>
-				<a href=login.jsp">Login</a>
+				<a href="login.jsp">Login</a>
 			</h2>
 		</div>
 		<div class='whysign'>

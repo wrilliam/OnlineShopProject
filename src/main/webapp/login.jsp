@@ -10,7 +10,7 @@
 			<form action="loginAction.jsp" method="post">
 				<input type="email" name="email" placeholder="Please enter your e-mail address" required>
 				<input type="password" name="password" placeholder="Please enter your password" required>
-				<input type="submit" value="login">
+				<input type="submit" value="Log in">
 			</form>
 			<h2>
 				<a href="signup.jsp">Sign Up</a>
