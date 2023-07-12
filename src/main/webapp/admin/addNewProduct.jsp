@@ -8,18 +8,26 @@
 <title>Add New Product</title>
 </head>
 <body>
+	<%
+	String msg = request.getParameter("msg");
+	if ("done".equals(msg)) {
+	%>
 	<h3 class="alert">Product Added Successfully!</h3>
+	<%
+	} else if ("error".equals(msg)) {
+	%>
 	<h3 class="alert">Whoops! Something went wrong! Please try again!</h3>
 	<%
+	}
 	int id = 1;
 	try {
-		Connection connect = ConnectionProvider.getConnection();
-		Statement stmt = connect.createStatement();
-		ResultSet rs = stmt.executeQuery("SELECT MAX() FROM Products");
-		while (rs.next()) {
-			id = rs.getInt(1);
-			id += 1;
-		}
+	Connection connect = ConnectionProvider.getConnection();
+	Statement stmt = connect.createStatement();
+	ResultSet rs = stmt.executeQuery("SELECT MAX() FROM Products");
+	while (rs.next()) {
+		id = rs.getInt(1);
+		id += 1;
+	}
 	} catch (Exception e) {
 	}
 	%>
